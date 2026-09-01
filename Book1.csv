@@ -49,3 +49,5 @@ agw-test01,ApplicationGateway,Ankit,Test,10/10/2026
 agw-test02,ApplicationGateway,Sumit,Test,10/22/2026
 acr-dev01,ContainerRegistry,Pooja,Dev,9/5/2026
 acr-prod01,ContainerRegistry,Deepak,Prod,12/31/2026
+agw-test01,ApplicationGateway,Ankit,Test,2/7/2026
+agw-test01,ApplicationGateway,Ankit,Test,3/10/2026
