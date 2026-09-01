@@ -79,7 +79,7 @@ foreach ($Resource in $ExpiredResources) {
 # ============================================
 
 # Check whether Slack Webhook URL has been configured
-if ($SlackWebhookUrl -eq "YOUR_SLACK_WEBHOOK_URL") {
+if ([string]::IsNullOrWhiteSpace($webhookUrl)) {
 
     Write-Host "WARNING: Slack Webhook URL is not configured." -ForegroundColor Yellow
     Write-Host "PowerShell report generated successfully."
@@ -95,7 +95,7 @@ $Payload = @{
 try {
 
     Invoke-RestMethod `
-        -Uri $SlackWebhookUrl `
+        -Uri $webhookUrl `
         -Method Post `
         -ContentType "application/json" `
         -Body $Payload
